@@ -3408,8 +3408,8 @@ background-color: #ffd5cd; }
       z-index: 2;
       color: #fff;
       cursor: default;
-      background-color: #5CB85C;
-      border-color: #5CB85C; }
+      background-color: #ffd5cd;
+      border-color: #ffd5cd; }
     .page-item.disabled .page-link, .page-item.disabled .page-link:focus, .page-item.disabled .page-link:hover {
       color: #818a91;
       pointer-events: none;
@@ -3422,12 +3422,12 @@ background-color: #ffd5cd; }
     float: left;
     padding: 0.5rem 0.75rem;
     margin-left: -1px;
-    color: #5CB85C;
+    color: #8675a9;
     text-decoration: none;
     background-color: #fff;
     border: 1px solid #ddd; }
     .page-link:focus, .page-link:hover {
-      color: #3d8b3d;
+      color: #c3aed6;
       background-color: #eceeef;
       border-color: #ddd; }
   
