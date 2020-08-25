@@ -18,14 +18,17 @@ import Topbar from 'components/topbar';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 import { CurrentUserProvider } from './contexts/currentUser';
+import CurrentUserChecker from 'pages/authentication/components/currentUserChecker.js';
 
 const App = () => {
   return (
     <CurrentUserProvider>
-      <Router>
-        <Topbar />
-        <Routes />
-      </Router>
+      <CurrentUserChecker>
+        <Router>
+          <Topbar />
+          <Routes />
+        </Router>
+      </CurrentUserChecker>
     </CurrentUserProvider>
   );
 };
