@@ -1,16 +1,47 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useReducer } from 'react';
 
-export const CurrentUserContext = createContext([{}, () => {}]);
+const initialState = {
+  isLoading: false,
+  isLoggedIn: null,
+  currrentUser: null,
+};
+
+//reducer for different states
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'LOADING':
+      return { ...state, isLoading: true };
+    case 'SET_AUTHROIZED':
+      return {
+        ...state,
+        isLoggedIn: true,
+        isLoading: false,
+        currentUser: action.payload,
+      };
+    case 'SET_UNAUTHORIZED':
+      return {
+        ...state,
+        isLoggedIn: false,
+      };
+    default:
+      return state;
+  }
+};
+
+// [{}, () => {}]
+// Before argument this was parameter
+export const CurrentUserContext = createContext();
 
 export const CurrentUserProvider = ({ children }) => {
-  const [state, setState] = useState({
-    isLoading: false,
-    isLoggedIn: null,
-    currrentUser: null,
-  });
+  const value = useReducer(reducer, initialState);
+  // const [state, setState] = useState({
+  //   isLoading: false,
+  //   isLoggedIn: null,
+  //   currrentUser: null,
+  // });
 
   return (
-    <CurrentUserContext.Provider value={[state, setState]}>
+    <CurrentUserContext.Provider value={value}>
       {children}
     </CurrentUserContext.Provider>
   );
