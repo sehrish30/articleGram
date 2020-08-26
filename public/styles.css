@@ -313,7 +313,7 @@
     color: #5CB85C;
     text-decoration: none; }
     a:focus, a:hover {
-      color: #3d8b3d;
+      color: #8675a9;
       text-decoration: underline; }
     a:focus {
       outline: thin dotted;
@@ -5109,8 +5109,8 @@ background-color: #ffd5cd; }
     .nav-pills.outline-active .nav-link:hover {
       color: #555; }
     .nav-pills.outline-active .nav-link.active {
-      background: #fff !important;
-      border-bottom: 2px solid #5CB85C !important;
+      background: #ffd5cd !important;
+      border-bottom: 2px solid #8675a9 !important;
       color: #8675a9 !important; }
   
   footer {
@@ -5231,7 +5231,7 @@ background-color: #ffd5cd; }
   
   .home-page .sidebar {
     padding: 5px 10px 10px 10px;
-    background: #f3f3f3;
+    background: #efbbcf;
     border-radius: 4px; }
     .home-page .sidebar p {
       margin-bottom: 0.2rem; }
