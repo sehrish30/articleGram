@@ -16,7 +16,7 @@ import ReactDOM from 'react-dom';
 import Routes from 'routes';
 import Topbar from 'components/topbar';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { CurrentUserProvider } from './contexts/currentUser';
 import CurrentUserChecker from 'pages/authentication/components/currentUserChecker.js';
 
